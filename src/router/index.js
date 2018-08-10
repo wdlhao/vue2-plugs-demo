@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import Login from '@/components/Login'
-import HouseEntrust from '@/components/HouseEntrust'
+import HelloWorld from 'ps/HelloWorld'
+import Login from 'ps/Login'
+import HouseEntrust from 'ps/HouseEntrust'
 
 Vue.use(Router)
 

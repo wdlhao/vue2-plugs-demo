@@ -4,7 +4,14 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+// import '@/utils/rem'
+import "lib-flexible";
 
+
+import axios from 'axios';
+
+
+Vue.prototype.axios = axios;
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

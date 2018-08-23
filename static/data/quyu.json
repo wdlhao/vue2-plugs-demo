@@ -1,0 +1,72 @@
+{
+	"result": {
+		"list": [{
+			"lng": 114.353622,
+			"quyu": {
+				"name": "武昌",
+				"id": "2969e6bb-df9d-11e5-bcc3-00163e1c066c"
+			},
+			"quyuAId": "2969e6bb-df9d-11e5-bcc3-00163e1c066c",
+			"houseNum": 9,
+			"lat": 30.564860
+		}, {
+			"lng": 114.433896,
+			"quyu": {
+				"name": "洪山",
+				"id": "2975c0e7-df9d-11e5-bcc3-00163e1c066c"
+			},
+			"quyuAId": "2975c0e7-df9d-11e5-bcc3-00163e1c066c",
+			"houseNum": 17,
+			"lat": 30.543623
+		}, {
+			"lng": 114.364644,
+			"quyu": {
+				"name": "黄陂",
+				"id": "29820030-df9d-11e5-bcc3-00163e1c066c"
+			},
+			"quyuAId": "29820030-df9d-11e5-bcc3-00163e1c066c",
+			"houseNum": 3,
+			"lat": 30.985286
+		}, {
+			"lng": 114.332868,
+			"quyu": {
+				"name": "江岸",
+				"id": "298bf322-df9d-11e5-bcc3-00163e1c066c"
+			},
+			"quyuAId": "298bf322-df9d-11e5-bcc3-00163e1c066c",
+			"houseNum": 3,
+			"lat": 30.656091
+		}, {
+			"lng": 114.087155,
+			"quyu": {
+				"name": "东西湖",
+				"id": "2991d5b7-df9d-11e5-bcc3-00163e1c066c"
+			},
+			"quyuAId": "2991d5b7-df9d-11e5-bcc3-00163e1c066c",
+			"houseNum": 5,
+			"lat": 30.698153
+		}, {
+			"lng": 113.972065,
+			"quyu": {
+				"name": "蔡甸",
+				"id": "299fdba4-df9d-11e5-bcc3-00163e1c066c"
+			},
+			"quyuAId": "299fdba4-df9d-11e5-bcc3-00163e1c066c",
+			"houseNum": 1,
+			"lat": 30.456184
+		}, {
+			"lng": 114.367082,
+			"quyu": {
+				"name": "江夏",
+				"id": "29b9449b-df9d-11e5-bcc3-00163e1c066c"
+			},
+			"quyuAId": "29b9449b-df9d-11e5-bcc3-00163e1c066c",
+			"houseNum": 4,
+			"lat": 30.252484
+		}]
+	},
+	"status": {
+		"msg": "操作成功!",
+		"code": "200"
+	}
+}

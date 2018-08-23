@@ -1,7 +1,6 @@
 export function MP(ak) {
     return new Promise(function (resolve, reject) {
         window.onBMapCallback = function () {
-            console.log(BMap);
             resolve(BMap)
         }
         var script = document.createElement("script");

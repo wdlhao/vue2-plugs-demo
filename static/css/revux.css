@@ -1,0 +1,65 @@
+/* 覆盖滚动条样式 */
+.weui-wepay-flow__li_done .weui-wepay-flow__state{
+    background-color: #D8D8D8 !important;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+}
+.weui-wepay-flow__process{
+    background-color: #D8D8D8 !important;
+    height: 4px;
+}
+/* 覆盖dialog弹框样式 */
+.weui-dialog{
+    max-width:none !important;
+    background-color:transparent !important;
+}
+
+/*铺盖previewer样式*/
+.pswp__top-bar,.pswp__counter{
+    line-height: .8rem !important;
+    height:.8rem !important;
+    font-size:.35rem !important;
+}
+.pswp__button, .pswp__button--arrow--left:before, .pswp__button--arrow--right:before{
+    height:.8rem !important;
+    width: .8rem !important;
+}
+.pswp__button{
+    display: none !important;
+}
+
+/*重置时间选择*/
+
+.dp-header .dp-item {
+    font-size: .35rem !important;
+    height: .93rem !important;
+    line-height: .93rem !important;
+}
+.scroller-component{
+    height: 5.33rem !important;
+}
+.scroller-indicator{
+    height: .93rem !important;
+}
+.scroller-item {
+    font-size: .32rem !important;
+    height: .93rem !important;
+    line-height: .93rem !important;
+}
+.weui-toast{
+    width: 2.2rem !important;
+    height:2.2rem !important;
+}
+.vux-loading-no-text .weui-toast {
+    display: flex;
+    min-height: 1.30rem !important;
+    line-height: 1.30rem;
+    margin-left: -1.1rem;
+    top:200px !important;
+    justify-content: center;
+    align-items: center;
+}
+.weui-icon_toast.weui-loading{
+    margin: 0 !important;
+}

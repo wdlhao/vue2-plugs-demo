@@ -12,7 +12,7 @@ import axios from 'axios';
 import VeeValidate, { Validator } from 'vee-validate'
 import CN from 'vee-validate/dist/locale/zh_CN.js'
 
-Validator.addLocale(CN)
+// Validator.addLocale(CN)
 Vue.use(VeeValidate, {// 表单验证
   locale: 'zh_CN'
 })
@@ -89,7 +89,7 @@ const dictionary = {
     }
   }
 }
-Validator.updateDictionary(dictionary)
+// Validator.updateDictionary(dictionary)
 
 Vue.config.productionTip = false
 

@@ -106,11 +106,11 @@ export default {
 
                     let p2 = document.createElement("p");
                     p2.style.color = "#fff";
+                    p2.style.fontSize = ".32rem";
+                    p2.style.lineHeight = ".44rem";
                     div.appendChild(p2);
                     p2.appendChild(document.createTextNode(this._houseNum));
 
-                    p2.style.fontSize = ".32rem";
-                    p2.style.lineHeight = ".44rem";
                     let date1 = "";
                     div.addEventListener("touchstart", () => {
                         this._div._bugFlag = true;
@@ -139,7 +139,7 @@ export default {
                 };
                 this.ComaplexCustomOverlay.prototype.draw = function() {
                     var map = this._map;
-                    var pixel = map.pointToOverlayPixel(this._point);
+                    var pixel = map.pointToOverlayPixel(this._point); // 将地理坐标转换为像素坐标
                     this._div.style.left = pixel.x + "px";
                     this._div.style.top = pixel.y + "px";
                 };

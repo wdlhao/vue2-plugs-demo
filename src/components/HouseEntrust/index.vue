@@ -77,8 +77,6 @@
             </div>
             <button>提交</button>
         </form>
-        <Tips v-if="showTip"
-              :content="errorContent"></Tips>
     </div>
 </template>
 <script>
@@ -115,9 +113,9 @@ export default {
         validateBeforeSubmit() {
             this.$validator.validateAll().then(result => {
                 if (result) {
-                   console.log("填写正确~");
+                   alert("填写正确~");
                 } else {
-                   console.log("填写有误~");
+                   alert("填写有误~");
                 }
             });
         }
@@ -135,8 +133,9 @@ export default {
 form {
     padding: 0 0.53rem 0.93rem;
     .form-title {
-        line-height: 2.27rem;
+        line-height: 2rem;
         font-size: 0.51rem;
+        text-align: left;
     }
     .form-item {
         display: flex;
@@ -161,7 +160,7 @@ form {
             right: 0.27rem;
             top: 50%;
             transform: translateY(-50%);
-            font-size: 0.4rem;
+            font-size: 0.32rem;
             padding-right: 0.27rem;
             sup {
                 position: absolute;

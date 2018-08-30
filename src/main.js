@@ -7,15 +7,18 @@ import router from './router'
 // import '@/utils/rem'
 import "lib-flexible";
 import axios from 'axios';
+import VueTouch from "vue-touch";
+
 
 
 import VeeValidate, { Validator } from 'vee-validate'
-import CN from 'vee-validate/dist/locale/zh_CN.js'
+import CN from 'vee-validate/dist/locale/zh_CN.js'; // 中文文件
 
-// Validator.addLocale(CN)
+Validator.addLocale(CN)
 Vue.use(VeeValidate, {// 表单验证
   locale: 'zh_CN'
 })
+// 扩展的自定义正则方法
 Validator.extend('ownerPhone', {
   messages: {
     zh_CN: field => '请输入正确手机号'
@@ -89,7 +92,12 @@ const dictionary = {
     }
   }
 }
-// Validator.updateDictionary(dictionary)
+Validator.updateDictionary(dictionary)
+
+Vue.use(VueTouch, { name: "v-touch" });
+
+
+
 
 Vue.config.productionTip = false
 

@@ -1,5 +1,5 @@
 {
-  "name": "vue2-vee-validate",
+  "name": "vue2-plugs-demo",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "wdlhao <wdl@efanghang.com>",
@@ -13,9 +13,10 @@
   "dependencies": {
     "axios": "^0.18.0",
     "lib-flexible": "^0.3.2",
-    "vee-validate": "^2.1.0-beta.7",
+    "vee-validate": "^2.0.0-rc.25",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vue-touch": "^2.0.0-beta.4"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

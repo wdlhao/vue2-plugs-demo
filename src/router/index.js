@@ -4,6 +4,8 @@ import HelloWorld from 'ps/HelloWorld' // ps-->src/components
 import Login from 'ps/Login'
 import HouseEntrust from 'ps/HouseEntrust'
 import baiduMap from 'ps/baiduMap'
+import Test from 'ps/Test'
+import Transition from 'ps/Transition'
 
 Vue.use(Router)
 
@@ -15,15 +17,25 @@ export default new Router({
       component: HelloWorld
     },
     {
+      path: '/test',
+      name: 'Test',
+      component: Test
+    },
+    {
+      path: '/transition',
+      name: 'Transition',
+      component: Transition
+    },
+    {
       path: '/Login',
       name: 'Login',
       component: Login
     },
-    // {
-    //   path: '/HouseEntrust',
-    //   name: 'HouseEntrust',
-    //   component: HouseEntrust
-    // },
+    {
+      path: '/HouseEntrust',
+      name: 'HouseEntrust',
+      component: HouseEntrust
+    },
     {
       path: '/baiduMap',
       name: 'baiduMap',

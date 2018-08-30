@@ -14,6 +14,7 @@ export default {
                 map:"",
                 ak:"aUGsIRrh54O2tyyv1RifNsNg7QfhwCwM",
                 areaList:[],   // 覆盖物数据
+                locationImg:require('./images/location.png')
             }
         },
         created(){
@@ -38,8 +39,10 @@ export default {
                         map.centerAndZoom(new BMap.Point(lng,lat), 11);
                         // 添加地图类型控件
                         map.addControl(new BMap.MapTypeControl());  
-                        // 设置地图显示的城市 此项是必须设置的
-                        map.setCurrentCity("武汉");    
+                        map.setCurrentCity("武汉");  // 仅当设置城市信息时，MapTypeControl的切换功能才能可用   
+                         //map.addControl(new BMap.GeolocationControl());  // 针对移动端开发,定位控件
+
+
                         // 开启鼠标滚轮缩放      
                         map.enableScrollWheelZoom(true);
                         // 设置定时器，对地图进行自动移动
@@ -49,7 +52,8 @@ export default {
                         // setTimeout(function(){
                         //     map.setZoom(14);
                         // },4000);
-                        this.addControl(this.map);
+                        this.addControlZoom(); // 自定义放大地图级别控件
+                        this.addControlLocation(); // 自定义定位控件
                         // 添加地图自定义覆盖物
                         this.overlay(this.map);  // 绘制覆盖物形状
                         this.addOverlay();
@@ -159,7 +163,7 @@ export default {
                     this.map.addOverlay(myCompOverlay);
                 }
             },
-            addControl(map){
+            addControlZoom(){
                 // 定义一个控件类，即function    
                 function ZoomControl(){    
                     // 设置默认停靠位置和偏移量  
@@ -189,7 +193,41 @@ export default {
                 // 创建控件实例    
                 var myZoomCtrl = new ZoomControl();    
                 // 添加到地图当中    
-                map.addControl(myZoomCtrl);
+                this.map.addControl(myZoomCtrl);
+            },
+            addControlLocation(){
+                var that = this;
+                  // 定义一个控件类，即function    
+                function ZoomControl(){    
+                    // 设置默认停靠位置和偏移量  
+                    this.defaultAnchor = BMAP_ANCHOR_BOTTOM_LEFT;    
+                    this.defaultOffset = new BMap.Size(20, 30);    
+                }    
+                // 通过JavaScript的prototype属性继承于BMap.Control   
+                ZoomControl.prototype = new BMap.Control();
+                ZoomControl.prototype.initialize = function(map){    
+                    // 创建一个DOM元素   
+                    var img = document.createElement("img");    
+                    img.setAttribute('src',that.locationImg)
+                    // 设置样式    
+                    img.style.cursor = "pointer";    
+                    img.style.border = "1px solid gray";    
+                    img.style.backgroundColor = "white";    
+                    // 绑定事件，点击一次放大两级    
+                    img.onclick = function(e){  
+                        // 默认进来，显示的地图为根据gcid从接口拿到的数据
+                        // 点击定位，定位到用户当前城市，判断当前城市是否有房源数据，有则重新渲染数据，无则显示提示框；
+                        alert('img');
+                    }    
+                    // 添加DOM元素到地图中   
+                    map.getContainer().appendChild(img);    
+                    // 将DOM元素返回  
+                    return img;    
+                }
+                // 创建控件实例    
+                var myZoomCtrl = new ZoomControl();    
+                // 添加到地图当中    
+                this.map.addControl(myZoomCtrl);
             }
         }
 }

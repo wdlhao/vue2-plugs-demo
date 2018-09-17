@@ -10,8 +10,14 @@ import store from './store';   // vuex store
 import "lib-flexible";
 import axios from 'axios';
 import VueTouch from "vue-touch";
+import VueLazyload from 'vue-lazyload'
 
-
+Vue.use(VueLazyload, {
+  preLoad: 1.3, // 预压高度的比例
+  error: '../assets/img/no-pic.png', // 图像的加载失败时 显示的error图标
+  loading: '../assets/imgLoading.png', // 图像正常加载时 显示的loading图标
+  attempt: 1 // 图像尝试加载 次数
+})
 
 import VeeValidate, { Validator } from 'vee-validate'
 import CN from 'vee-validate/dist/locale/zh_CN.js'; // 中文文件
